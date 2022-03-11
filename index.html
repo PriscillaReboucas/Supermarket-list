@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Supermarket list</title>
+</head>
+<body>
+    <head class="head">
+        <h1 class="title"><img src="./photos/fruits.png" alt="fruits image">Supermarket list</h1>
+        
+    </head>
+    <main class="container">
+        <section id="list">
+            <h2 class="mylist">My daily list</h2>
+            <div class="flex">
+                <h3>
+                    <a href="#"class="add-button" onclick="Modal.toggle()"><img id="cart-image" src="./photos/cart.png" alt="cart image">Add new product</a>
+                </h3>
+                <h3 class="myTotal">
+                    <p>Total cart:</p>
+                    <p id="totalList"></p>
+                </h3>
+            </div>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Unit price</th>
+                        <th>Total price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>New product</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <label class="sr-only" for="product">Product</label>
+                        <input type="text" name="product" id="product" placeholder="product">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="quantity">Quantity</label>
+                        <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="price">price</label>
+                        <input type="number" name="price" id="price" placeholder="price" step="0.01">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" class="button-cancel" onclick="Modal.toggle()">Cancel</a>
+                        <button type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Code by Priscilla Reboucas</p>
+    </footer>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
